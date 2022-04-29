@@ -1,13 +1,11 @@
-
-
 const serverPort = 3000;
 
-let express = require('express');
-let path = require('path');
-let fs   = require('fs');
+const express = require('express');
+const path = require('path');
+const fs   = require('fs');
 
 let dataBase = null;
-let app = express();
+const app = express();
 
 app.set('views', 'views');
 app.set('view engine', 'hbs');
@@ -22,31 +20,28 @@ app.get('/', (request, response) =>{
 });
 
 app.post('/data', (req, res) => {
-
     const searchInStr = req.body.searchIn;
-    const fieldName   = req.body.fieldName;
     const searchFor   = req.body.searchText;
 
-    let searchIn = dataBase[searchInStr];
+    const searchIn = dataBase[searchInStr];
 
-
-    if(searchIn.length === 0)
+    if(!searchIn.length)
     {
         res.redirect('/');
         return;
     }
 
-    let headers = Object.keys(searchIn[0]);
+    const headers = Object.keys(searchIn[0]);
 
-    let outputArray = new Array();
+    const outputArray = Array();
 
     searchIn.forEach(function (item, index) {
         
-        let values = Object.values(item);
+        const values = Object.values(item);
 
-        if(searchFor.length > 0)
+        if(searchFor.length)
         {
-            if(item[fieldName] == undefined || !item[fieldName].toString().includes(searchFor))
+            if(item['id'] == undefined || !item['id'].toString().includes(searchFor))
             {
                 return;
             }
@@ -56,18 +51,13 @@ app.post('/data', (req, res) => {
     });
 
     res.render('index', 
-    { headerValues : headers,
-      rows         : outputArray
+    { 
+	    headerValues : headers,
+        rows         : outputArray
     });
-
 });
 
-
 app.listen(serverPort, () => {
-
-
     dataBase = JSON.parse(fs.readFileSync('./database.json').toString());
-
     console.log('Server started');
-
 });
