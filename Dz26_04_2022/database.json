@@ -1,0 +1,101 @@
+{
+
+	"users" : [
+		
+		{
+			"id"		: 1,
+			"name" 		: "Олег",
+			"secName"	: "Юзерович",
+			"patronymic": "Олегович"
+		},
+		
+		{
+			"id"		: 2,
+			"name" 		: "Максим",
+			"secName"	: "Матросович",
+			"patronymic": "Артемович"
+		},
+		
+		{
+			"id"		: 3,
+			"name" 		: "Юрій",
+			"secName"	: "Нодович",
+			"patronymic": "Давидович"
+		},
+		
+		{
+			"id"		 : 4,
+			"name" 		 : "Дмитро",
+			"secName"	 : "Степлер",
+			"patronymic" : "Юліанович"
+		},
+		
+		{
+			"id"		 : 5,
+			"name" 		: "Микита",
+			"secName"	: "Злий",
+			"patronymic": "Кирилович"
+		},
+		
+		{
+			"id"		 : 6,
+			"name" 		: "Сергій",
+			"secName"	: "Невподоба",
+			"patronymic": "Афанасієвич"
+		},
+		
+		{
+			"id"		 : 7,
+			"name" 		: "Андрій",
+			"secName"	: "Миколайчук",
+			"patronymic": "Артемович"
+		}
+	],
+
+	"autos" : [
+		
+		{
+			"id"	 : 1,
+			"vendor" : "Opel",
+			"model"	 : "Vectra"
+		},
+		
+		{
+			"id"	 : 2,
+			"vendor" : "Opel",
+			"model"	 : "Omega"
+		},
+		
+		{
+			"id"	 : 3,
+			"vendor" : "Mercedes-Benz",
+			"model"  : "W221"			
+		},
+		
+		{
+			"id"	 : 4,
+			"vendor" : "Mercedes-Benz",
+			"model"	 : "C217"
+		},
+		
+		{
+			"id"	 : 5,
+			"vendor" : "BMW",
+			"model"	 : "M5"
+		},
+		
+		{
+			"id"	 : 6,
+			"vendor" : "BMW",
+			"model"	 : "E34"
+		},
+		
+		{
+			"id"	 : 7,
+			"vendor" : "BMW",
+			"model"	 : "E36"
+		}
+		
+	]
+
+}
