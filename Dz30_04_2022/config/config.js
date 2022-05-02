@@ -1,6 +1,8 @@
 const fs = require('fs');
 
+const dbManager = require('../dbManager');
+
 module.exports = {
     PORT : 3000,
-    DBs : JSON.parse(fs.readFileSync('./database.json').toString())
-}
+    DBs : new dbManager('./database.json'),
+};

@@ -16,21 +16,10 @@ module.exports = {
     },
 
     removeIfEqual: function (dataBase, valueName, checkWith) {
-        let resultIndex = 0;
-
-        const check = dataBase.rows.find((value, index) => {
-
+        return dataBase.rows.find((value, index) => {
             if (value[valueName] == checkWith) {
-                resultIndex = index;
-                return true;
+                return dataBase.rows.splice(index, 1);                
             }
-
-            return false;
-        });
-
-        if (check)
-            dataBase.rows.splice(resultIndex, 1);
-
-        return check;
+        });         
     },
 }

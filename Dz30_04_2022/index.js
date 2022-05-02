@@ -1,10 +1,8 @@
 const express = require('express');
 
-const configs = require('./config/config');
-
-const routeRoot = require('./routers/root')
-
-const routeData = require('./routers/data')
+const configs 	  = require('./config/config');
+const routeRoot   = require('./routers/root');
+const routeData   = require('./routers/data');
 const cntrlStatus = require('./controllers/status');
 
 const app = express();
