@@ -1,0 +1,42 @@
+html {
+	background-color: black;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	height: 100%;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	color: white;
+}
+
+form {
+	margin: 0px 10px 10px 0px;
+}
+
+table {
+	width: 50%;
+
+	border: 2px solid #282828;
+}
+
+td {
+	border: 1px solid #282828;
+}
+
+
+body {
+	margin: 0px 0px 0px 0px;
+}
+
+h1 {
+	color: white;
+}
+
+h2 {
+	color: blue;
+}
