@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Database</title>
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+
+<body>
+
+	<div class="container" style="	
+				background-image : linear-gradient(0deg, #000000, #293b93);">
+
+		<h1>{{title}}</h1>
+
+		<div class="container">
+
+			<div>
+				{{#each dbs}}
+				<a href="data/{{this}}"><button>{{this}}</button></a>
+				{{/each}}
+			</div>
+
+			<script>
+
+				function getById() {
+					const dataBase = document.getElementById('dataBase').value;
+					const id = document.getElementById('elementId').value;
+
+					location.replace(`data/${dataBase}/${id}`);
+				}
+				
+				function updateById() {
+					const dataBase = document.getElementById('dataBase').value;
+					const id = document.getElementById('elementId').value;
+
+					location.replace(`data/update/${dataBase}/${id}`);
+				}
+
+				function newRow() {
+					const dataBase = document.getElementById('dataBase').value;
+
+					location.replace(`data/create/${dataBase}`);
+				}
+
+				function removeById() {
+					const dataBase = document.getElementById('dataBase').value;
+					const id = document.getElementById('elementId').value;
+
+					location.replace(`data/delete/${dataBase}/${id}`);
+				}
+
+			</script>
+
+			<div style="margin-top : 20px;">
+				<select id="dataBase">
+					{{#each dbs}}
+					<option value="{{this}}">{{this}}</option>
+					{{/each}}
+				</select>
+
+				<input id="elementId" type="text">
+				<button onclick="getById()">Get by id</button>
+				<button onclick="removeById()">Remove by id</button>
+				<button onclick="updateById()">Update by id</button>
+				<button onclick="newRow()">Create new record</button>
+
+			</div>
+
+		</div>
+
+
+
+	</div>
+</body>
+
+
+</html>
